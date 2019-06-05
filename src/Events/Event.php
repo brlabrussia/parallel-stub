@@ -3,6 +3,7 @@ declare(strict_types = 1);
 
 namespace parallel\Events;
 
+if (!\class_exists('\\parallel\\Events\\Event')) {
 /**
  * When an Event is returned, {@see Event::$object} shall be removed from the loop that returned it, should the event be
  *  a write event the Input for {@see Event::$source} shall also be removed.
@@ -19,4 +20,5 @@ final class Event {
 
     /** @var mixed Shall be set for Read/Error events */
     public $value;
+}
 }

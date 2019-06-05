@@ -8,12 +8,13 @@ use parallel\Events\Error\Existence;
 use parallel\Events\Error\Timeout;
 use parallel\Events\Event;
 
+if (!\class_exists('\\parallel\\Events')) {
 /**
  * The Event loop monitors the state of sets of futures and or channels (targets) in order to perform read
  *  ({@see Future::value()}, {@see Channel::recv()}) and write ({@see Channel::send()}) operations as the targets
  *  become available and the operations may be performed without blocking the event loop.
  */
-final Events implements \Countable, \Traversable {
+final class Events implements \Countable, \Traversable {
     /**
      * Shall set input for this event loop
      *
@@ -93,4 +94,10 @@ final Events implements \Countable, \Traversable {
      * @throws Timeout if timeout is used and reached.
      */
     public function poll(): ?Event {}
+
+    /**
+     * @inheritdoc
+     */
+    public function count() {}
+}
 }

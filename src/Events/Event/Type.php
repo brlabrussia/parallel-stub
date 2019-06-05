@@ -3,6 +3,7 @@ declare(strict_types = 1);
 
 namespace parallel\Events\Event;
 
+if (!\class_exists('\\parallel\\Events\\Event\\Type')) {
 final class Type {
     /* Event::$object was read into Event::$value */
     const Read = 1;
@@ -21,4 +22,5 @@ final class Type {
 
     /* Event::$object (Future) raised error */
     const Error = 4;
+}
 }

@@ -5,6 +5,7 @@ namespace parallel;
 
 use parallel\Runtime\Bootstrap;
 
+if (!function_exists('\\parallel\\bootstrap')) {
 /**
  * Shall use the provided file to bootstrap all runtimes created for automatic scheduling via {@see run()}.
  *
@@ -14,7 +15,9 @@ use parallel\Runtime\Bootstrap;
  * @throws Bootstrap if called after parallel\run().
  */
 function bootstrap(string $file): void {}
+}
 
+if (!function_exists('\\parallel\\run')) {
 /**
  * Shall schedule task for execution in parallel, passing argv at execution time.
  *
@@ -25,4 +28,5 @@ function bootstrap(string $file): void {}
  *
  * @return Future|null
  */
-public function run (\Closure $task, array $argv = []): ?Future {}
+function run(\Closure $task, array $argv = []): ?Future {}
+}

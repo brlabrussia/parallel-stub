@@ -3,6 +3,7 @@ declare(strict_types = 1);
 
 namespace parallel;
 
+if (!\class_exists('\\parallel\\Future')) {
 /**
  * A Future represents the return value or uncaught exception from a task, and exposes an API for cancellation.
  */
@@ -44,4 +45,5 @@ final class Future {
      * @throws Future\Error\Cancelled if task was already cancelled.
      */
     public function cancel(): bool {}
+}
 }

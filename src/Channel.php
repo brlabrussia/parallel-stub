@@ -7,6 +7,7 @@ use parallel\Channel\Error\Closed;
 use parallel\Channel\Error\Existence;
 use parallel\Channel\Error\IllegalValue;
 
+if (!\class_exists('\\parallel\\Channel')) {
 /**
  * Unbuffered Channels
  *  An unbuffered channel will block on calls to {@see Channel::send()} until there is a reciever, and block on calls to
@@ -80,4 +81,5 @@ final class Channel {
      * @throws Closed if channel is closed.
      */
     public function close(): void {}
+}
 }

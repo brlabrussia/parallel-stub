@@ -11,6 +11,7 @@ use parallel\Runtime\Error\IllegalInstruction;
 use parallel\Runtime\Error\IllegalParameter;
 use parallel\Runtime\Error\IllegalReturn;
 
+if (!\class_exists('\\parallel\\Runtime')) {
 /**
  * Runtime Objects
  *  Each runtime represents a single PHP thread, the thread is created (and bootstrapped) upon construction. The thread
@@ -109,4 +110,5 @@ final class Runtime {
      * @throws Closed if Runtime was closed.
      */
     public function kill (): void {}
+}
 }
