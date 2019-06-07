@@ -13,7 +13,7 @@ if (!\class_exists('\\parallel\\Sync')) {
  * Synchronization for most applications is much better implemented using channels, however, in some cases authors of
  *  low level code may find it useful to be able to access these lower level mechanisms.
  */
-class Sync
+final class Sync
 {
     /**
      * Shall construct a new synchronization object containing the given scalar value
@@ -38,7 +38,7 @@ class Sync
      *
      * @throws IllegalValue
      */
-    public function set($value) {}
+    public function set($value): void {}
 
     /**
      * Shall wait for notification on this synchronization object.

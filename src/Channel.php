@@ -54,7 +54,7 @@ final class Channel {
      *
      * @throws Existence if channel does not exist.
      */
-    public function open(string $name): Channel {}
+    public static function open(string $name): Channel {}
 
     /**
      * Shall open the channel with the given name.
