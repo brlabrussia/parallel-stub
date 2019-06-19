@@ -38,7 +38,7 @@ final class Runtime {
      * @throws Error     if thread could not be created
      * @throws Bootstrap if bootstrapping failed
      */
-    public function __construct (string $bootstrap = null) {}
+    public function __construct(string $bootstrap = null) {}
 
     /**
      * Shall schedule task for execution in parallel, passing argv at execution time.
@@ -90,7 +90,7 @@ final class Runtime {
      * @throws IllegalParameter   if task accepts or argv contains illegal variables.
      * @throws IllegalReturn      if task returns illegally.
      */
-    public function run (\Closure $task, array $argv = []): ?Future {}
+    public function run(\Closure $task, array $argv = []): ?Future {}
 
     /**
      * Shall request that the runtime shutsdown.
@@ -99,7 +99,7 @@ final class Runtime {
      *
      * @throws Closed if Runtime was already closed.
      */
-    public function close (): void {}
+    public function close(): void {}
 
     /**
      * Shall attempt to force the runtime to shutdown.
@@ -109,6 +109,6 @@ final class Runtime {
      *
      * @throws Closed if Runtime was closed.
      */
-    public function kill (): void {}
+    public function kill(): void {}
 }
 }

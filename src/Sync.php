@@ -22,7 +22,7 @@ final class Sync
      *
      * @throws IllegalValue
      */
-    public function __construct ($value = null) {}
+    public function __construct($value = null) {}
 
     /**
      * Shall atomically return the syncrhonization objects value
@@ -43,19 +43,21 @@ final class Sync
     /**
      * Shall wait for notification on this synchronization object.
      */
-    public function wait() {}
+    public function wait(): void {}
 
     /**
      * Shall notify one (by default) or all threads waiting on the synchronization object.
      *
      * @param bool $all
      */
-    public function notify(bool $all = false) {}
+    public function notify(bool $all = false): void {}
 
     /**
-     * Shall exclusively enter into the critical code
+     * Shall exclusively enter into the critical code. Shall return value from $critical callable.
      *
      * @param callable $critical
+     *
+     * @return int|bool|string|float|double|null|mixed
      */
     public function __invoke(callable $critical) {}
 }

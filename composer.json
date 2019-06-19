@@ -2,9 +2,9 @@
   "name": "brlabrussia/parallel-stub",
   "description": "Provide parallel PHP extension stub",
   "keywords": ["parallel", "stub"],
-  "licence": "MIT",
+  "license": "MIT",
   "type": "library",
-  "version": "1.1.1a",
+  "version": "1.1.2",
   "homepage": "https://github.com/brlabrussia/parallel-stub",
   "authors": [
     {

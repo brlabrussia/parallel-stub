@@ -7,6 +7,7 @@ use parallel\Events\Error;
 use parallel\Events\Error\Existence;
 use parallel\Events\Error\Timeout;
 use parallel\Events\Event;
+use parallel\Events\Input;
 
 if (!\class_exists('\\parallel\\Events')) {
 /**
@@ -18,9 +19,9 @@ final class Events implements \Countable, \Traversable {
     /**
      * Shall set input for this event loop
      *
-     * @param Events\Input $input
+     * @param Input $input
      */
-    public function setInput(Events\Input $input): void {}
+    public function setInput(Input $input): void {}
 
     /**
      * Shall watch for events on the given channel
