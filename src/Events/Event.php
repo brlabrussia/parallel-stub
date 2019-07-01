@@ -10,6 +10,8 @@ if (!\class_exists('\\parallel\\Events\\Event')) {
 /**
  * When an Event is returned, {@see Event::$object} shall be removed from the loop that returned it, should the event be
  *  a write event the Input for {@see Event::$source} shall also be removed.
+ *
+ * Manual constructing this class cause {@see \parallel\Events\Event\Error}.
  */
 final class Event {
     /** @var int Shall be one of Event\Type constants */

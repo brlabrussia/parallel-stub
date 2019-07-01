@@ -3,8 +3,8 @@ declare(strict_types = 1);
 
 namespace parallel;
 
-use parallel\Runtime\Bootstrap;
 use parallel\Runtime\Error;
+use parallel\Runtime\Error\Bootstrap;
 use parallel\Runtime\Error\Closed;
 use parallel\Runtime\Error\IllegalFunction;
 use parallel\Runtime\Error\IllegalInstruction;
@@ -84,11 +84,12 @@ final class Runtime {
      *
      * @return Future|null
      *
-     * @throws Closed if          \parallel\Runtime was closed.
-     * @throws IllegalFunction    if task is a closure created from an internal function.
-     * @throws IllegalInstruction if task contains illegal instructions.
-     * @throws IllegalParameter   if task accepts or argv contains illegal variables.
-     * @throws IllegalReturn      if task returns illegally.
+     * @throws Closed if             \parallel\Runtime was closed.
+     * @throws IllegalFunction       if task is a closure created from an internal function.
+     * @throws IllegalInstruction    if task contains illegal instructions.
+     * @throws IllegalParameter      if task accepts or argv contains illegal variables.
+     * @throws IllegalReturn         if task returns illegally.
+     * @throws Error\IllegalVariable if task closure has access to non static variables.
      */
     public function run(\Closure $task, array $argv = []): ?Future {}
 

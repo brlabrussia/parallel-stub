@@ -3,7 +3,7 @@ declare(strict_types = 1);
 
 namespace parallel;
 
-use parallel\Runtime\Bootstrap;
+use parallel\Runtime\Error\Bootstrap;
 
 if (!function_exists('\\parallel\\bootstrap')) {
 /**
