@@ -34,6 +34,13 @@ final class Channel {
     public const Infinite = -1;
 
     /**
+     * Shall make a buffered channel with the given capacity.
+     *
+     * @param int|null $capacity
+     */
+    public function __construct(int $capacity = null) {}
+
+    /**
      * Shall make a buffered channel with the given name and capacity.
      *
      * @param string   $name
